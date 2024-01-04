@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        style="@style/AppBarLayoutStyle"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="@string/fragment_settings_title"
+            style="@style/ToolbarStyle"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        style="@style/ScrollStyle"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--Appearance-->
+            <TextView
+                android:id="@+id/text_view_appearance_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin_small"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                android:text="@string/fragment_settings_appearance_settings"
+                style="@style/SettingsGroupTitleTextViewStyle"
+                />
+            <com.example.barcodescanner.feature.common.view.SettingsButton
+                android:id="@+id/button_choose_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/fragment_settings_theme"
+                app:isSwitchVisible="false"
+                />
+
+            <View
+                android:id="@+id/delimiter_appearance"
+                style="@style/DelimiterStyle"
+                />
+
+            <!--Scanner-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_very_big"
+                android:layout_marginBottom="@dimen/default_margin_small"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                android:text="@string/fragment_settings_scanner_settings"
+                style="@style/SettingsGroupTitleTextViewStyle"
+                />
+
+            <com.example.barcodescanner.feature.common.view.SettingsButton
+                android:id="@+id/button_choose_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/fragment_settings_camera"
+                app:isSwitchVisible="false"
+                />
+            <View style="@style/DelimiterStyle" />
+
+            <!--History-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_very_big"
+                android:layout_marginBottom="@dimen/default_margin_small"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                android:text="@string/fragment_settings_history_settings"
+                style="@style/SettingsGroupTitleTextViewStyle"
+                />
+
+            <com.example.barcodescanner.feature.common.view.SettingsButton
+                android:id="@+id/button_clear_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/fragment_settings_clear_history"
+                app:isDelimiterVisible="false"
+                app:isSwitchVisible="false"
+                />
+
+            <!--About-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_very_big"
+                android:layout_marginBottom="@dimen/default_margin_small"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                android:text="@string/fragment_settings_about"
+                style="@style/SettingsGroupTitleTextViewStyle"
+                />
+
+            <com.example.barcodescanner.feature.common.view.SettingsButton
+                android:id="@+id/button_app_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/fragment_settings_app_version"
+                app:isDelimiterVisible="false"
+                app:isSwitchVisible="false"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
